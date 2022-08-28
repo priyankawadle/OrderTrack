@@ -1,0 +1,268 @@
+{
+	"info": {
+		"_postman_id": "4739e1c2-8ad0-4a20-aa69-a293334fe240",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Request/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"qwerty123\",\r\n    \"password\":\"qwerty123\",\r\n    \"email\":\"qwerty123@gmail.com\",\r\n    \"typeof_user\":\"seller\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request/signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"qwerty123@gmail.com\",\r\n     \"password\":\"qwerty123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request/getusers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NjE2NzI5MDMsImp3dGlkIjoiaHp3YzgiLCJhdWRpZW5jZSI6IlRFU1QiLCJleHAiOjE2NjE2NzY1MDN9.-yI6Ia20e0YBVZ4I1epqeDq2rhLTexDzGidnF2pnPzI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request/getcatalogs",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NjE2NzM2MDksImp3dGlkIjoieXpiMngyIiwiYXVkaWVuY2UiOiJURVNUIiwiZXhwIjoxNjYxNjc3MjA5fQ.Z73-r3_b_M1ukPqZd27kyo9XTQhv6LyiF5pgWVPq7b0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "/api/buyer/seller-catalog/?seller_id=3",
+					"path": [
+						"api",
+						"buyer",
+						"seller-catalog",
+						""
+					],
+					"query": [
+						{
+							"key": "seller_id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request/create-order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NjE2NzM2MDksImp3dGlkIjoieXpiMngyIiwiYXVkaWVuY2UiOiJURVNUIiwiZXhwIjoxNjYxNjc3MjA5fQ.Z73-r3_b_M1ukPqZd27kyo9XTQhv6LyiF5pgWVPq7b0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"product_id\":\"1\", \r\n  \"amount\":\"2000\", \r\n  \"user_id\":\"2\", \r\n  \"seller_id\":\"3\"   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/buyer/create-order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"buyer",
+						"create-order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request/create-catalog",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NjE2Nzc2NDYsImp3dGlkIjoiYmVrNndxIiwiYXVkaWVuY2UiOiJURVNUIiwiZXhwIjoxNjYxNjgxMjQ2fQ.oggxDTwv5KozhBU7ydFDA2GAbh_OiUVbxPpiii4ndxo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"name\":\"name_catalog\" ,\r\n   \"seller_id\" :\"3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/seller/create-catalog",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"seller",
+						"create-catalog"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request/getorders",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NjE2Nzc2NDYsImp3dGlkIjoiYmVrNndxIiwiYXVkaWVuY2UiOiJURVNUIiwiZXhwIjoxNjYxNjgxMjQ2fQ.oggxDTwv5KozhBU7ydFDA2GAbh_OiUVbxPpiii4ndxo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/seller/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"seller",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request/getorders_byparticular_seller",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NjE2Nzc2NDYsImp3dGlkIjoiYmVrNndxIiwiYXVkaWVuY2UiOiJURVNUIiwiZXhwIjoxNjYxNjgxMjQ2fQ.oggxDTwv5KozhBU7ydFDA2GAbh_OiUVbxPpiii4ndxo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/seller/orders/:seller_id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"seller",
+						"orders",
+						":seller_id"
+					],
+					"variable": [
+						{
+							"key": "seller_id",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
