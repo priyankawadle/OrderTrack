@@ -2,6 +2,7 @@
  * Module dependencies.
  */
  require('./.env')
+ var config=require('./config.js')
  var express = require('express') 
    , user = require('./routes/users')
    , http = require('http')
@@ -12,16 +13,11 @@
  var jwt = require('jsonwebtoken');
  var mysql    = require('mysql2');
  var connection = mysql.createConnection({
-        //  host: process.env.DB_HOST,
-        //  user: process.env.DB_USER,
-        //  password: process.env.DB_PASS,
-        //  database : process.env.DB_NAME,
-
-        host: 'localhost',
-        user: 'root',
-        password: 'root',
-        database : 'hydr1d',
-         port: 3306
+         host: config.db.host,
+         user: config.db.user,
+         password: config.db.password,
+         database : config.db.database,
+         port: config.db.port
      });
  
  
