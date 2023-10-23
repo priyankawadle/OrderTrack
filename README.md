@@ -1,8 +1,8 @@
-# sample_test_api
+# OrderTrack
 i uploaded all files which are required for execution of project 
 if you want run this project follow below instructions
 1. clone this folder using 
-git clone https://github.com/priyankawadle/sample_test_api.git
+git clone https://github.com/priyankawadle/OrderTrack.git
 2.import database dump file through workbench 
 click on server button and data import and upload dump file of db
 3.import postman collection file (sample_endpoints_api.postman_collection) on postman 
